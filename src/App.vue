@@ -4,7 +4,12 @@
       <img src="./assets/polygon-dude.svg">
       <h1 id='polyLogo' >{{ title }} <div class='blu-dot' ></div></h1>
       <div id='srchBox'>
-        <input v-model='searchBox' placeholder="  Search the web without being tracked">
+        <v-col cols="12" sm="6">
+          <v-text-field
+            placeholder='Search the web without being tracked'
+            outlined
+          ></v-text-field>
+        </v-col>
       </div>
     </div>
     <main>
@@ -70,16 +75,9 @@ main {
   border-radius: .05em;
 }
 
-#srchBox {
-  float: right;
-  margin-top: 2.8em;
-}
-
 #srchBox input {
   width: 25em;
   height: 1.8em;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: .2em;
 }
 
 
