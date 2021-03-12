@@ -10,7 +10,7 @@
           <button class='btn-getStarted'>Get Started</button>
         </div>
       </div>
-      <img src='../assets/people.svg' width='inherit' >
+      <v-img src='src/assets/people.svg' aspect-ratio='1.2' contain></v-img>
     </div>
   </div>
 </template>
@@ -26,7 +26,7 @@
     margin-top: 2em;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: 800px) {
     #introFlex {
       display: flex;
     }
@@ -34,6 +34,7 @@
     #introFlex>* {
       flex: 1 1 0px;
       width: 50%;
+      padding-right: 1em;
     }
   }
 
