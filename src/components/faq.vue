@@ -10,10 +10,10 @@
         :key='i'
       >
         <v-card
-          width='350'
+          width='300'
           class='faqCard'
         >
-          <v-card-title><h3>{{ question.title }}</h3></v-card-title>
+          <v-card-title class='card-title'><h3>{{ question.title }}</h3></v-card-title>
           <v-card-text><div>{{ question.text }}</div></v-card-text>
         </v-card>
       </v-slide-item>
@@ -67,5 +67,8 @@
 <style scoped>
   .faqCard {
     margin: 1em 1em;
+  }
+  .card-title {
+    word-break: break-word;
   }
 </style>
