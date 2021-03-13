@@ -7,7 +7,7 @@
           <div>We don't store your personal info. We don't follow you around with ads.</div>
           <br/>
           <div>We don't track you. Ever.</div>
-          <button class='btn-getStarted'>Get Started</button>
+          <GetStartedBtn />
         </div>
       </div>
       <v-img src='src/assets/people.svg' aspect-ratio='1.2' contain></v-img>
@@ -16,8 +16,12 @@
 </template>
 
 <script>
+  import GetStartedBtn from './getStartedBtn'
   export default {
-    name: 'intro'
+    name: 'intro',
+    components: {
+      GetStartedBtn
+    }
   }
 </script>
 
@@ -46,24 +50,5 @@
   .sectionInfo {
     margin-top: 1em;
     font-size: 1.5em;
-  }
-
-  .btn-getStarted {
-    margin-top: 1em;
-    padding: .5em 1em;
-    font-size: 1em;
-    font-family: 'Helvetica Neue';
-    font-weight: bold;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.87);
-    border: 2px solid rgba(0, 0, 0, 0.87);
-    border-radius: .2em;
-    cursor: pointer;
-    outline: none;
-  }
-
-  .btn-getStarted:hover {
-    color: black;
-    background-color: white;
   }
 </style>

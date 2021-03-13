@@ -19,12 +19,24 @@
       </div>
       <img src='../assets/littleDude.svg'>
     </div>
+    <div>
+      <div class='sectionTitle sectionSub'>We don't store your personal information. Ever.</div>
+      <div class='sectionInfo'>
+        Our privacy policy is simple: we don't collect or share any of your personal information.
+        <div><GetStartedBtn /></div>
+      </div>
+      <v-img src='src/assets/polygon-friends.svg'/>
+    </div>
   </div>
 </template>
 
 <script>
+import GetStartedBtn from './getStartedBtn'
   export default {
-    name: 'privacyBlock'
+    name: 'privacyBlock',
+    components: {
+      GetStartedBtn
+    }
   }
 </script>
 
@@ -34,7 +46,7 @@
     margin-top: 1em;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 800px) {
     .privacyFlex {
       display: block;
     }
@@ -58,5 +70,10 @@
     font-size: 1em;
     font-weight: 500;
     margin-top: 1em;
+  }
+
+  .sectionSub {
+    margin-top: 1em;
+    font-size: 2em
   }
 </style>
