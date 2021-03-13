@@ -1,8 +1,9 @@
-<template>
+<template
+  v-if='home'>
   <div id="app">
     <div id='header' >
       <img src="./assets/polygon-dude.svg">
-      <router-link to='#privacy' ><h1 id='polyLogo'>{{ title }} <div class='blu-dot' ></div></h1></router-link>
+      <h1 id='polyLogo'>{{ title }} <div class='blu-dot' ></div></h1>
       <div id='navbar_container'>
         <div id='navbar'>
           <div class='nav_link'></div>
@@ -35,6 +36,7 @@
 <script>
 import 'vue-router'
 import Intro from './components/intro'
+import GetStartedBtn from './components/getStartedBtn'
 import PrivacyBlock from './components/privacyBlock'
 import Footer from './components/footer'
 import FAQ from './components/faq'
@@ -48,14 +50,16 @@ const findPos = (el) => {
   }
   return curtop - 203.97;
 }
+
 export default {
   name: 'app',
   components: {
-    PrivacyBlock, Intro, FAQ, Footer
+    PrivacyBlock, Intro, FAQ, Footer, GetStartedBtn
   },
   data () {
     return {
-      title: 'PolyPolyGo'
+      title: 'PolyPolyGo',
+      home: true
     }
   },
   methods: {
@@ -142,6 +146,6 @@ main {
 }
 
 .nav_link:hover {
-  color: #82b1ff
+  color: #82b1ff;
 }
 </style>

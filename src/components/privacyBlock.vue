@@ -15,7 +15,7 @@
       <div class='sectionTitle sectionSub'>We don't store your personal information. Ever.</div>
       <div class='sectionInfo'>
         Our privacy policy is simple: we don't collect or share any of your personal information.
-        <div><GetStartedBtn /></div>
+        <div><GetStartedBtn text='Get started'/></div>
       </div>
       <v-img src='src/assets/polygon-friends.svg'/>
     </div>

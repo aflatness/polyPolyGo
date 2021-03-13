@@ -18,7 +18,7 @@
         </v-card>
       </v-slide-item>
     </v-slide-group>
-    <div class='btnDiv'><GetStartedBtn /></div>
+    <div class='btnDiv'><GetStartedBtn text='Get started'/></div>
   </div>
 </template>
 

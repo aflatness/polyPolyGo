@@ -1,10 +1,16 @@
 <template>
-  <button class='btn-getStarted'>Get Started</button>
+  <router-link to='/signup'><button class='btn-getStarted' @click='renderSignUp()'>{{ text }}</button></router-link>
 </template>
 
 <script>
   export default {
-    name: 'getStarted'
+    name: 'getStarted',
+    props: ['text'],
+    methods: {
+      renderSignUp: () => {
+        console.log('signing up')
+      }
+    }
   }
 </script>
 
