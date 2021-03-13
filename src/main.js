@@ -5,10 +5,11 @@ import PrivacyBlock from './components/privacyBlock'
 import vuetify from './plugins/vuetify' // path to vuetify export
 
 // new Vue({
-//   vuetify
+
 // }).$mount('#app')
 
 new Vue({
   el: '#app',
+  vuetify,
   render: h => h(App)
 })

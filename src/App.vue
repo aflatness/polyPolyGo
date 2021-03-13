@@ -17,6 +17,8 @@
       <br/>
       <br/>
       <PrivacyBlock />
+      <br/>
+      <FAQ />
     </main>
   </div>
 </template>
@@ -24,11 +26,12 @@
 <script>
 import Intro from './components/intro'
 import PrivacyBlock from './components/privacyBlock'
+import FAQ from './components/faq'
 
 export default {
   name: 'app',
   components: {
-    PrivacyBlock, Intro
+    PrivacyBlock, Intro, FAQ
   },
   data () {
     return {
