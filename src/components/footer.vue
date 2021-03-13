@@ -1,7 +1,7 @@
 <template>
   <div id='footer'>
     <div id='footer_email'>
-      <a href='mailto:aflatness@gmail.com'>aflatness@gmail.com <img class='email_Icon' src='src/assets/email.svg' /></a></div>
+      <a href='mailto:aflatness@gmail.com'> <img class='email_Icon' src='src/assets/email.svg' /><div id='email_address'>aflatness@gmail.com</div></a></div>
     <div id='footer_copyright'>Copyright <span> &#169; 2021</span> Alec Flatness</div>
   </div>
 </template>
@@ -19,7 +19,6 @@
   }
 
   #footer {
-    position: relative;
     background-color: white;
     line-height: 24px;
     padding: 1.5em 7%;
@@ -27,7 +26,6 @@
     text-align: center;
   }
   img {
-    /* vertical-align: -.45em; */
     text-align: center;
   }
 
@@ -50,9 +48,12 @@
       margin-top: 0;
     }
     img {
-      /* display: inline-block; */
-      position: absolute;
+      float: right;
       margin-left: .2em;
+    }
+
+    #email_address {
+      display: inline-block;
     }
   }
 
