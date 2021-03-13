@@ -4,7 +4,7 @@
       <img src="./assets/polygon-dude.svg">
       <h1 id='polyLogo' >{{ title }} <div class='blu-dot' ></div></h1>
       <div id='srchBox'>
-        <v-col cols="12" sm="6">
+        <v-col cols="12" sm="7">
           <v-text-field
             placeholder='Search the web without being tracked'
             outlined
@@ -79,11 +79,4 @@ main {
   border: 0 transparent white;
   border-radius: .05em;
 }
-
-#srchBox input {
-  width: 25em;
-  height: 1.8em;
-}
-
-
 </style>

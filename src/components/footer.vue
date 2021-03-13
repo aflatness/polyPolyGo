@@ -1,14 +1,18 @@
 <template>
   <div id='footer'>
     <div id='footer_email'>
-      <a href='mailto:aflatness@gmail.com'> <img class='email_Icon' src='src/assets/email.svg' /><div id='email_address'>aflatness@gmail.com</div></a></div>
+      <a href='mailto:aflatness@gmail.com'>
+        <img class='email_Icon' src='src/assets/email.svg' />
+        <div id='email_address'>aflatness@gmail.com</div>
+      </a>
+    </div>
     <div id='footer_copyright'>Copyright <span> &#169; 2021</span> Alec Flatness</div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'footer'
+    name: 'footer_section'
   }
 </script>
 
