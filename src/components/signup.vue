@@ -8,15 +8,27 @@
       <div id='question_content'>
         <div v-if="section === 'intro'" class='intro_card'>Let's get you started with a free consultation.</div>
         <div v-if="section === 'who'">
-          <v-item-group>
-
-          </v-item-group>
+          <v-btn-toggle
+          >
+            <v-btn
+              v-for='(option, i) in options'
+              :key='i'
+              @click='enableBtn()'
+              class='who_btn'
+              height='5em'
+              width='11em'
+              outlined
+              color="blue"
+              x-large
+            >{{ option }}
+            </v-btn>
+          </v-btn-toggle>
         </div>
         <div v-if="section === 'contact'">
 
         </div>
       </div>
-      <div @click='changePage()'><GetStartedBtn text='Continue' /></div>
+      <div @click='changePage()'><GetStartedBtn text='Continue' :disabled='disabled' /></div>
       <div class='counter'>{{ count }}<div class='counter_total'>/3</div></div>
     </div>
     <div class='guests'>
@@ -33,6 +45,9 @@
   let count = 1;
   let sections = ['intro', 'who', 'contact']
   let section = sections[0];
+  let disabled = false;
+
+  let options = ['Myself', 'My child', 'Someone else']
 
   export default {
     name: 'signup',
@@ -40,13 +55,19 @@
       GetStartedBtn
     },
     data: () => ({
-      title, count, section, titles, sections
+      title, count, section, titles, sections, disabled, options
     }),
     methods: {
       changePage: function () {
-        this.count++;
-        this.section = this.sections[this.count - 1];
-        this.title = this.titles[this.count - 1];
+        if (!this.disabled) {
+          this.disabled = this.count === 1 ? true : false
+          this.count++;
+          this.section = this.sections[this.count - 1];
+          this.title = this.titles[this.count - 1];
+        }
+      },
+      enableBtn: function () {
+        this.disabled = false;
       }
     }
   }
@@ -104,5 +125,14 @@
   .counter_total {
     color: grey;
     display: inline-block;
+  }
+
+  .v-btn-toggle {
+    display: block;
+  }
+
+  .who_btn {
+    margin: 1em 0;
+    border: 1px solid black;
   }
 </style>
