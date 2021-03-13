@@ -53,6 +53,10 @@ html, body {
 #header {
   padding: 1em 1em 0 1em;
   background-color: #fff;
+  /* display: flex; */
+  position: fixed;
+  width: 100%;
+  z-index: 1
 }
 
 #app {
@@ -61,12 +65,22 @@ html, body {
 }
 
 main {
-  margin: 1em 5%;
+  margin: 0 5% 1em 5%;
+  padding-top: 13em;
+  z-index: 2
+}
+
+@keyframes logoFadeIn {
+  from {
+    opacity: 0
+  }
 }
 
 #polyLogo {
   display: inline-block;
   margin-left: .5em;
+  opacity: 1;
+  animation: logoFadeIn 1s ease-in;
 }
 
 .blu-dot {
