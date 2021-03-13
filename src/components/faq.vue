@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id='faq'>
     <div class='sectionTitle'>Frequently Asked Questions</div>
     <v-slide-group
       v-model='model'

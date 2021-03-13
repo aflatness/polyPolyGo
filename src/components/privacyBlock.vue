@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id='privacy'>
     <div class='sectionTitle' >Privacy Protection For Any Device</div>
     <div class='privacyFlex'>
       <div class='block'
