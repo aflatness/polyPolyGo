@@ -20,18 +20,20 @@
       <br/>
       <FAQ />
     </main>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Intro from './components/intro'
 import PrivacyBlock from './components/privacyBlock'
+import Footer from './components/footer'
 import FAQ from './components/faq'
 
 export default {
   name: 'app',
   components: {
-    PrivacyBlock, Intro, FAQ
+    PrivacyBlock, Intro, FAQ, Footer
   },
   data () {
     return {

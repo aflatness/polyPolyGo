@@ -18,6 +18,7 @@
         </v-card>
       </v-slide-item>
     </v-slide-group>
+    <div class='btnDiv'><GetStartedBtn /></div>
   </div>
 </template>
 
@@ -68,7 +69,13 @@
   .faqCard {
     margin: 1em 1em;
   }
+
   .card-title {
     word-break: break-word;
+  }
+
+  .btnDiv {
+    text-align: center;
+    font-size: 2em;
   }
 </style>
