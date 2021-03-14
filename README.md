@@ -39,7 +39,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
   <h3 align="center">Poly Poly Go</h3>
 
   <p align="center">
-    project_description
+    A mock up of duck duck go using Polygon's styling and ui.
     <br />
     <a href="https://github.com/aflatness/polyPolyGo"><strong>Explore the docs »</strong></a>
     <br />
@@ -85,7 +85,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[[Poly Poly Go]](https://imgur.com/a/Ap92oOC)
+[Poly Poly Go](https://imgur.com/a/Ap92oOC)
 
 ### Built With
 
@@ -96,7 +96,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 * [Webpack Dev Server](https://www.npmjs.com/package/webpack-dev-server)
 
 
-[[Poly Poly Go]](https://imgur.com/a/ii2hcUe)
+[Poly Poly Go](https://imgur.com/a/ii2hcUe)
 
 ## Getting Started
 
@@ -119,9 +119,9 @@ To get a local copy up and running follow these simple steps.
    npm install
    ```
 3. See the product
-  ```sh
-  npm start
-  ```
+   ```sh
+   npm start
+   ```
 
 
 
@@ -153,7 +153,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Alec Flatness - [@twitter_handle](https://twitter.com/AFlatMajor4) - aflatness@gmail.com
+Alec Flatness - [@AFlatMajor4](https://twitter.com/AFlatMajor4) - aflatness@gmail.com
 
 Project Link: [https://github.com/aflatness/polyPolyGo](https://github.com/aflatness/polyPolyGo)
 
