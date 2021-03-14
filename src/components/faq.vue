@@ -18,7 +18,7 @@
         </v-card>
       </v-slide-item>
     </v-slide-group>
-    <div class='btnDiv'><GetStartedBtn text='Get started'/></div>
+    <div class='btnDiv' @click='change'><GetStartedBtn text='Get started'/></div>
   </div>
 </template>
 
@@ -61,7 +61,10 @@
     },
     data: () => ({
       questions
-    })
+    }),
+    methods: {
+      change: function () {this.$emit(`change`)}
+    }
   }
 </script>
 

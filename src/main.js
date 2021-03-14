@@ -22,5 +22,5 @@ new Vue({
   el: '#app',
   vuetify,
   router,
-  render: h => h(SignUp)
+  render: h => h(App)
 })

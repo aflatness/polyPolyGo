@@ -2,7 +2,7 @@
   <div>
     <div v-if='disabled'><button class='btn-disabled'>{{ text }}</button></div>
   <div v-else>
-    <router-link to='/signup'><button class='btn-getStarted' @click='renderSignUp()'>{{ text }}</button></router-link>
+    <router-link to='/signup'><button class='btn-getStarted' >{{ text }}</button></router-link>
   </div>
   </div>
 </template>
@@ -10,12 +10,7 @@
 <script>
   export default {
     name: 'getStarted',
-    props: ['text', 'disabled'],
-    methods: {
-      renderSignUp: () => {
-        console.log('signing up')
-      }
-    }
+    props: ['text', 'disabled', 'status']
   }
 </script>
 
@@ -24,7 +19,7 @@
     margin-top: 1em;
     margin-bottom: 1em;
     padding: .5em 1em;
-    font-size: 1em;
+    font-size: 1em !important;
     font-family: 'Helvetica Neue';
     font-weight: bold;
     color: white;

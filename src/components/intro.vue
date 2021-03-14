@@ -7,7 +7,7 @@
           <div>We don't store your personal info. We don't follow you around with ads.</div>
           <br/>
           <div>We don't track you. Ever.</div>
-          <GetStartedBtn text='Get started'/>
+          <div @click='change'><GetStartedBtn text='Get started'/></div>
         </div>
       </div>
       <v-img src='src/assets/people.svg' aspect-ratio='1.2' contain></v-img>
@@ -21,6 +21,9 @@
     name: 'intro',
     components: {
       GetStartedBtn
+    },
+    methods: {
+      change: function () {this.$emit(`change`)}
     }
   }
 </script>

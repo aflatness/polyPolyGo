@@ -1,10 +1,9 @@
-<template
-  v-if='home'>
+<template>
   <div id="app">
     <div id='header' >
       <img src="./assets/polygon-dude.svg">
       <h1 id='polyLogo'>{{ title }} <div class='blu-dot' ></div></h1>
-      <div id='navbar_container'>
+      <div v-if='home' id='navbar_container'>
         <div id='navbar'>
           <div class='nav_link'></div>
           <router-link to='#intro'><div class='nav_link' @click='scrollToIntro()'>Who we are</div></router-link>
@@ -12,7 +11,7 @@
           <router-link to='#FAQ'><div class='nav_link' @click='scrollToFAQ()'>FAQ's</div></router-link>
         </div>
       </div>
-      <div id='srchBox'>
+      <div v-if='home' id='srchBox'>
         <v-col cols="12" sm="7">
           <v-text-field
             placeholder='Search the web without being tracked'
@@ -21,15 +20,22 @@
         </v-col>
       </div>
     </div>
-    <main>
-      <Intro />
-      <br/>
-      <br/>
-      <PrivacyBlock />
-      <br/>
-      <FAQ />
-    </main>
-    <Footer />
+    <div v-if='home'>
+      <main>
+        <Intro @change='changeView(`signUp`)'/>
+        <br/>
+        <br/>
+        <PrivacyBlock @change='changeView(`signUp`)'/>
+        <br/>
+        <FAQ @change='changeView(`signUp`)'/>
+      </main>
+      <Footer />
+    </div>
+    <div v-else>
+      <main>
+        <SignUp @done='changeView(`done`)'/>
+      </main>
+    </div>
   </div>
 </template>
 
@@ -40,6 +46,7 @@ import GetStartedBtn from './components/getStartedBtn'
 import PrivacyBlock from './components/privacyBlock'
 import Footer from './components/footer'
 import FAQ from './components/faq'
+import SignUp from './components/signup'
 
 const findPos = (el) => {
   var curtop = 0;
@@ -54,7 +61,7 @@ const findPos = (el) => {
 export default {
   name: 'app',
   components: {
-    PrivacyBlock, Intro, FAQ, Footer, GetStartedBtn
+    PrivacyBlock, Intro, FAQ, Footer, GetStartedBtn, SignUp
   },
   data () {
     return {
@@ -71,6 +78,15 @@ export default {
     },
     scrollToFAQ: () => {
       window.scroll(0, findPos(document.getElementById('faq')));
+    },
+    changeView: function (val) {
+      console.log('changing view', val);
+      if (val === 'signUp') {
+        this.home = false
+      }
+      if (val === 'done') {
+        this.home = true;
+      }
     }
   }
 }
@@ -126,8 +142,9 @@ main {
   border-radius: .05em;
 }
 
-#navbar_container {
+#navbar_container{
   display: inline-block;
+  /* background-color: green; */
 }
 
 #navbar {

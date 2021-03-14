@@ -6,7 +6,7 @@
     <div id='questionaire'>
       <div class='question_title'>{{ title }}</div>
       <div id='question_content'>
-        <div v-if="section === 'intro'" class='intro_card'>Let's get you started with a free consultation.</div>
+        <div v-if="section === 'intro'" class='intro_card'><div class='card_text'>Let's get you started with a free consultation.</div></div>
         <v-app>
           <div v-if="section === 'who'">
             <v-btn-toggle
@@ -58,9 +58,9 @@
             </v-form>
           </div>
         </v-app>
-        <div v-if="section === 'done'" class='intro_card'>A referral specialist will contact you shortly.</div>
+        <div v-if="section === 'done'" class='intro_card'><div class='card_text'>A referral specialist will contact you shortly.</div></div>
       </div>
-      <div @click='changePage()'><GetStartedBtn :text='btn_text' :disabled='disabled' /></div>
+      <div @click='changePage()' id='signup_btn'><GetStartedBtn :text='btn_text' :disabled='disabled' :status='count'/></div>
       <div v-if="section !== 'done'" class='counter'>{{ count }}<div class='counter_total'>/3</div></div>
     </div>
     <div class='guests'>
@@ -106,6 +106,9 @@
     }),
     methods: {
       changePage: function () {
+        if (!this.disabled && this.section === 'done') {
+          this.$emit('done')
+        }
         if (!this.disabled && this.count < 3) {
           this.disabled = this.count <= 2 ? true : false
           this.count++;
@@ -155,7 +158,6 @@
   #signup {
     display: flex;
     width: 100%;
-    /* margin: 1em 7%; */
     align-items: bottom;
   }
   #signup>* {
@@ -183,6 +185,11 @@
     position: relative;
   }
 
+  .card_text {
+    position: relative;
+    z-index: 10;
+  }
+
   .intro_card:after {
     content: '';
     display: block;
@@ -191,9 +198,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 1px solid grey;
+    border: 1px solid white;
+    background-color: white;
     transform: rotate( -3deg);
     pointer-events: none;
+    z-index: 9;
   }
 
   .counter {
@@ -222,8 +231,12 @@
     margin-bottom: .5em;
   }
 
-  .btn-getStarted, .btn-disabled {
-    font-size: 1.5em !important;
-    width: 100%;
+  .theme--light {
+    background: inherit !important
+  }
+
+  #signup_btn {
+    font-size: 1.5em;
+    width: inherit;
   }
 </style>
