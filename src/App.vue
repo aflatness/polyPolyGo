@@ -149,6 +149,15 @@ main {
 
 #navbar {
   display: flex;
+  position: absolute;
+  right: 1em;
+  top: 3.8em;
+}
+
+@media (max-width: 700px) {
+  #navbar {
+    display: block;
+  }
 }
 
 #navbar a {
