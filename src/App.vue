@@ -2,7 +2,7 @@
   <div id="app">
     <div id='header' >
       <img src="./assets/polygon-dude.svg">
-      <h1 id='polyLogo'>{{ title }} <div class='blu-dot' ></div></h1>
+      <h1 id='polyLogo' @click='changeView(`home`)'>{{ title }} <div class='blu-dot' ></div></h1>
       <div v-if='home' id='navbar_container'>
         <div id='navbar'>
           <div class='nav_link'></div>
@@ -84,7 +84,7 @@ export default {
       if (val === 'signUp') {
         this.home = false
       }
-      if (val === 'done') {
+      if (val === 'done' || val === 'home') {
         this.home = true;
       }
     }
@@ -129,6 +129,7 @@ main {
   margin-left: .5em;
   opacity: 1;
   animation: logoFadeIn 1s ease-in;
+  cursor: pointer;
 }
 
 .blu-dot {
@@ -144,7 +145,6 @@ main {
 
 #navbar_container{
   display: inline-block;
-  /* background-color: green; */
 }
 
 #navbar {
@@ -162,7 +162,7 @@ main {
   font-weight: bold;
 }
 
-.nav_link:hover {
+.nav_link:hover, #polyLogo:hover {
   color: #82b1ff;
 }
 </style>
