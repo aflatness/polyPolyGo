@@ -36,12 +36,10 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 <p align="center">
   <a href="https://github.com/aflatness/polyPolyGo"></a>
 
-  <h3 align="center">Poly Poly Go</h3>
+  <h2 align="center">Poly Poly Go</h2>
 
   <p align="center">
     A mock up of duck duck go using Polygon's styling and ui.
-    <br />
-    <a href="https://github.com/aflatness/polyPolyGo"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/aflatness/polyPolyGo">View Demo</a>
@@ -85,7 +83,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[Poly Poly Go](https://imgur.com/a/Ap92oOC)
+![Poly Poly Go](./src/assets/mock2.jpg)
 
 ### Built With
 
@@ -96,7 +94,7 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 * [Webpack Dev Server](https://www.npmjs.com/package/webpack-dev-server)
 
 
-[Poly Poly Go](https://imgur.com/a/ii2hcUe)
+![Poly Poly Go](./src/assets/mock1.jpg)
 
 ## Getting Started
 
