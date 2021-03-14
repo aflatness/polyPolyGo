@@ -83,6 +83,10 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+This project was to re-create DuckDuckGo's landing page, utilizing Polygon's design and ui scheme, through Vue.js and Vuetify. All info from the splash page was taken directly from DuckDuckGo's page.
+
+All assets were taken with permission from [Polygon's](https://hellopolygon.com) landing page.
+
 ![Poly Poly Go](./src/assets/mock2.jpg)
 
 ### Built With
